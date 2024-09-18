@@ -1,0 +1,48 @@
+/* Apply class instead of targeting element type since can render as anything */
+.busyForm {
+	button {
+		cursor: pointer;
+
+		&:disabled {
+			cursor: not-allowed;
+		}
+
+		&[aria-busy="true"] {
+			cursor: wait;
+
+			/* So that they don't double click and cause another request */
+			/* Workaround for cursor style not working when pointer-events:none applied just to aria-busy https://stackoverflow.com/a/57221281 */
+			/* TODO Still allowed to use keyboard to activate button */
+			&:active {
+				pointer-events: none;
+			}
+		}
+	}
+
+	input,
+	textarea {
+		&:read-only {
+			cursor: wait;
+		}
+	}
+
+	select {
+		cursor: pointer;
+
+		&[aria-busy="true"] {
+			cursor: wait;
+		}
+	}
+}
+
+.busyLink {
+	cursor: pointer;
+
+	&[aria-busy="true"] {
+		cursor: wait;
+
+		&:active {
+			pointer-events: none;
+		}
+	}
+}

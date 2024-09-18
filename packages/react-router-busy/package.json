@@ -1,0 +1,47 @@
+{
+	"name": "react-router-busy",
+	"version": "0.0.1",
+	"description": "Accessible busy state for react-router forms and links",
+	"keywords": [
+		"react-router",
+		"form",
+		"react",
+		"remix",
+		"typescript",
+		"aria-busy"
+	],
+	"homepage": "https://github.com/bitofbreeze/react-router-busy",
+	"bugs": {
+		"url": "https://github.com/bitofbreeze/react-router-busy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bitofbreeze/react-router-busy.git"
+	},
+	"license": "MIT",
+	"files": ["build", "src"],
+	"type": "module",
+	"main": "build/busy.js",
+	"exports": {
+		".": {
+			"//": "./For importing directly in monorepo",
+			"bun": "./src/busy.tsx",
+			"default": "./build/busy.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc && cp src/busy.module.css build/busy.module.css",
+		"check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
+	},
+	"peerDependencies": {
+		"react-router-dom": "6.26.2",
+		"react": "18.3.1"
+	},
+	"devDependencies": {
+		"@arethetypeswrong/cli": "0.16.2",
+		"@changesets/cli": "2.27.8",
+		"@types/bun": "1.1.9",
+		"typescript": "5.6.2"
+	},
+	"dependencies": {}
+}

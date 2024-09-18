@@ -1,0 +1,29 @@
+name: Integrate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2.0.1
+        with:
+          bun-version: latest
+      - name: Install dependencies (`npm ci`)
+        run: bun install --frozen-lockfile
+      # Build checks types so no need for separate typecheck step
+      - name: Build
+        run: bun run build
+      - name: Check exports
+        run: bun run check-exports
+      - name: Test
+        run: bun test

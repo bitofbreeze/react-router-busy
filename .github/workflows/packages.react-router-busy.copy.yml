@@ -1,0 +1,32 @@
+name: Mirror react-router-busy to Own Repo
+
+on:
+  push:
+  schedule:
+    # Only sync to destination once a week
+    - cron: '0 0 * * 0'
+  pull_request_target:
+jobs:
+  move-code:
+    # Just don't run push in monorepo since we use cron there
+    # Still run on push in destination repo since it might be needed
+    # Note PR opened in dest repo pushes commit to source repo and now it's not run, doesn't seem to matter but if it does check actor
+    # And when PR merged in source, it still closes PR in destination but doesn't update destination repo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Copybara
+        uses: bitofbreeze/copybara-action@main
+        with:
+          access_token: ${{ secrets.COPY_GITHUB_REPO_TOKEN }}
+          ssh_key: ${{ secrets.COPY_SSH_KEY_RR_BUSY }}
+          sot_repo: bitofbreeze/mono
+          destination_repo: bitofbreeze/react-router-busy
+          push_files: "glob(['**'], exclude = ['apps/**', 'packages/**', '.github/workflows/*.yml']) + glob(['packages/react-router-busy/**', '.github/workflows/packages.react-router-busy.*.yml'])"
+          push_mode: "SQUASH"
+          # Make sure to always remove init-history after first copybara push, else PRs created in destination will fail the workflow since --init-history is not compatible with CHANGE_REQUEST
+          copybara_options: --init-history

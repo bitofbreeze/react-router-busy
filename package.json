@@ -1,0 +1,19 @@
+{
+	"name": "mono",
+	"private": true,
+	"devDependencies": {
+		"@biomejs/biome": "1.9.0",
+		"@happy-dom/global-registrator": "15.7.3"
+	},
+	"engines": {
+		"node": ">=20.6.0"
+	},
+	"scripts": {
+		"//lint": "No monorepo support yet so just use from root https://github.com/biomejs/biome/issues/2228",
+		"lint": "bunx @biomejs/biome check --vcs-use-ignore-file true --write .",
+		"postinstall": "patch-package"
+	},
+	"trustedDependencies": ["@biomejs/biome", "esbuild", "ngrok", "workerd"],
+	"workspaces": ["apps/*", "packages/*"],
+	"packageManager": "bun@1.1.27"
+}
