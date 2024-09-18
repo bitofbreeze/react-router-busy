@@ -29,4 +29,4 @@ jobs:
           push_files: "glob(['**'], exclude = ['apps/**', 'packages/**', '.github/workflows/*.yml']) + glob(['packages/react-router-busy/**', '.github/workflows/packages.react-router-busy.*.yml'])"
           push_mode: "SQUASH"
           # Make sure to always remove init-history after first copybara push, else PRs created in destination will fail the workflow since --init-history is not compatible with CHANGE_REQUEST
-          copybara_options: --init-history
+          # copybara_options: --init-history
