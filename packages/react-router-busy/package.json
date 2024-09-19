@@ -19,10 +19,7 @@
 		"url": "git+https://github.com/bitofbreeze/react-router-busy.git"
 	},
 	"license": "MIT",
-	"files": [
-		"build",
-		"src"
-	],
+	"files": ["build", "src"],
 	"type": "module",
 	"main": "build/busy.js",
 	"exports": {
