@@ -1,4 +1,4 @@
-name: Integrate (and Release)
+name: Release
 
 on:
   pull_request:
@@ -7,6 +7,9 @@ on:
       - main
     paths:
       - 'packages/react-router-busy/**'
+
+# Don't run publish multiple times at once
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   quality:
@@ -21,7 +24,7 @@ jobs:
           version: latest
       - name: Run Biome
         run: biome ci .
-  integrate:
+  validate:
     needs: [quality]
     runs-on: ubuntu-latest
     steps:
@@ -45,7 +48,7 @@ jobs:
   release:
     # Only upsert release PR when pushing (to main)
     if: github.event_name	== 'push'
-    needs: [integrate]
+    needs: [validate]
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
