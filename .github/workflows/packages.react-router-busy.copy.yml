@@ -28,7 +28,7 @@ jobs:
           ssh_key: ${{ secrets.COPY_SSH_KEY_RR_BUSY }}
           sot_repo: bitofbreeze/mono
           destination_repo: bitofbreeze/react-router-busy
-          push_files: "glob(['**'], exclude = ['apps/**', 'packages/**', '.github/workflows/*.yml']) + glob(['packages/react-router-busy/**', '.github/workflows/packages.react-router-busy.*.yml'])"
+          push_files: "glob(['**'], exclude = ['apps/**', 'packages/**', '.github/workflows/*.yml', 'bun.lockb']) + glob(['packages/react-router-busy/**', '.github/workflows/packages.react-router-busy.*.yml'])"
           # TODO Test if not doing squash shows commits in destination when not touching this package
           push_mode: "ITERATIVE"
           # Make sure to always remove init-history after first copybara push, else PRs created in destination will fail the workflow since --init-history is not compatible with CHANGE_REQUEST
