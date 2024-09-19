@@ -15,9 +15,9 @@ index 5642bbd..0ac8e05 100755
 +        (process_1.default.env.NODE_ENV === "production" && ci_info_1.isCI) ||
 +        (ci_info_1.isCI && !process_1.default.env.PATCH_PACKAGE_INTEGRATION_TEST) ||
 +        process_1.default.env.NODE_ENV === "test";
-+        // Don't error when flag is false
++        // Don't error when flag is false but this doesn't work because can't specify order of patches and it's not good to not error for errors other than a missing package
 +        if (!argv["error-on-fail"]) {
-+            shouldExitWithError = false;
++            // shouldExitWithError = false;
 +        }
 +
          const shouldExitWithWarning = !!argv["error-on-warn"];
