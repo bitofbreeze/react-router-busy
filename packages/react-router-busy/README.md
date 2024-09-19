@@ -1,6 +1,6 @@
 # react-router-busy
 
-A simple and performant package for managed, accessible form and button loading states.
+A simple and performant package for accessible form and button loading states.
 
 ## BusyForm
 
