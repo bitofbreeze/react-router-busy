@@ -8,7 +8,7 @@ Render `BusyForm` instead of `Form` or `fetcher.Form`:
 * All the form's inputs will become `readonly` during submission to prevent someone from changing input data during submission and causing themselves confusion. The `cursor` will be `wait` if hovering over an input.
 * The form's submit button will become `aria-busy="true"` during submission to prevent double-clicking and causing extraneous requests. The `cursor` will be `wait` if hovering over the button, and `pointer-events` will be `none` to actually prevent clicking. A keyboard user can currently still repress the button though because I haven't found a way to prevent it.
 
-I chose these attributes instead of `disabled` because it causes the field to not be sent in the form data and it's not accessibility friendly
+I chose these attributes instead of `disabled` because it causes the field to not be sent in the form data and it's not accessibility friendly.
 
 ### With fetcher
 
