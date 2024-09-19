@@ -2,12 +2,13 @@ name: Release
 
 on:
   # pull_request:
-  push:
-    branches:
-      - main
-    paths:
-      # This is fine for merging PR which is a push to main because changesets updates package's changelog and package.json to trigger this
-      - 'packages/react-router-busy/**'
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     # This is fine for merging PR which is a push to main because changesets updates package's changelog and package.json to trigger this
+  #     - 'packages/react-router-busy/**'
+  workflow_dispatch:
 
 permissions:
   contents: read # for checkout
@@ -50,7 +51,7 @@ jobs:
       - name: Check exports
         run: bun --filter react-router-busy check-exports
   release:
-    # Only upsert release PR when pushing (to main)
+    # Only make release when pushing (to main)
     if: github.event_name	== 'push'
     needs: [validate]
     runs-on: ubuntu-latest
