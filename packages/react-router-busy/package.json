@@ -31,11 +31,12 @@
 	},
 	"scripts": {
 		"build": "tsc && cp src/busy.module.css build/busy.module.css",
-		"check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
+		"check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+		"release": "changeset version && changeset publish"
 	},
 	"peerDependencies": {
-		"react-router-dom": "6.26.2",
-		"react": "18.3.1"
+		"react-router-dom": "^6.26.2",
+		"react": "^18.3.1"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "0.16.2",

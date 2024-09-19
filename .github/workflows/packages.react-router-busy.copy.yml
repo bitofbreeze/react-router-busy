@@ -6,6 +6,7 @@ on:
     # Only sync to destination once a week
     - cron: '0 0 * * 0'
   pull_request_target:
+  # TODO Call when a PR affecting this package is merged or release is made
 jobs:
   move-code:
     # Just don't run push in monorepo since we use cron there
