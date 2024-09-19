@@ -20,3 +20,21 @@ index d8d0925..874284a 100644
                      cwd: tmpRepoNpmRoot,
                  });
              }
+diff --git a/node_modules/patch-package/dist/stateFile.js b/node_modules/patch-package/dist/stateFile.js
+index 638a755..a4a8a5b 100644
+--- a/node_modules/patch-package/dist/stateFile.js
++++ b/node_modules/patch-package/dist/stateFile.js
+@@ -37,7 +37,12 @@ function savePatchApplicationState({ packageDetails, patches, isRebasing, }) {
+         version,
+         isRebasing,
+     };
+-    fs_1.writeFileSync(fileName, json_stable_stringify_1.default(state, { space: 4 }), "utf8");
++    try {
++        fs_1.writeFileSync(fileName, json_stable_stringify_1.default(state, { space: 4 }), "utf8"); 
++    } catch (e) {
++        console.log(e);
++    }
++    
+ }
+ exports.savePatchApplicationState = savePatchApplicationState;
+ function clearPatchApplicationState(packageDetails) {
