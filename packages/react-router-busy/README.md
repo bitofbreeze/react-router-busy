@@ -44,7 +44,7 @@ return (
 
 ## BusyLink
 
-This library assumes all your buttons are in forms. But links are another story, so `BusyLink` is a replacement for `Link` to add this functionality.
+This library assumes all your buttons are in forms. But links are another story, so `BusyLink` is a replacement for `Link` to add this functionality for relative paths.
 
 ### Link
 
