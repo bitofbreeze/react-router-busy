@@ -44,5 +44,15 @@
 		"semantic-release": "24.1.1",
 		"typescript": "5.6.2"
 	},
-	"dependencies": {}
+	"dependencies": {},
+	"release": {
+		"branches": ["main"],
+		"plugins": [
+			"@semantic-release/commit-analyzer",
+			"@semantic-release/release-notes-generator",
+			"@semantic-release/npm",
+			"@semantic-release/github"
+		],
+		"dryRun": true
+	}
 }
