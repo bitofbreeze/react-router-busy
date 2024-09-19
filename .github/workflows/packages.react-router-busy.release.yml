@@ -68,6 +68,8 @@ jobs:
           bun-version: latest
       - name: Install dependencies (`npm ci`)
         run: bun install --frozen-lockfile
+      # Note we have to toggle Workflow permissions > Allow GitHub Actions to create and approve pull requests in https://github.com/bitofbreeze/mono/settings/actions
+      # Even with permissions above https://github.com/orgs/community/discussions/27689#discussioncomment-5707424
       - name: Create release pull request or publish to npm
         id: changesets
         uses: changesets/action@v1
