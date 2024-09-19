@@ -37,6 +37,7 @@ jobs:
           bun-version: latest
       - name: Install dependencies (`npm ci`)
         # Different set of dependencies due to subset of packages causes lockfile changes that cause failure, so we don't copy lockfile over
+        # https://github.com/oven-sh/bun/issues/5792#issuecomment-2325444077
         run: bun install
       - name: Test
         run: bun test --filter react-router-busy --coverage

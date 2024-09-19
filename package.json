@@ -3,7 +3,8 @@
 	"private": true,
 	"devDependencies": {
 		"@biomejs/biome": "1.9.0",
-		"@happy-dom/global-registrator": "15.7.3"
+		"@happy-dom/global-registrator": "15.7.3",
+		"patch-package": "8.0.0"
 	},
 	"engines": {
 		"node": ">=20.6.0"
