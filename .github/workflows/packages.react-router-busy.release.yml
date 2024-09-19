@@ -6,6 +6,7 @@ on:
     branches:
       - main
     paths:
+      # This is fine for merging PR which is a push to main because changesets updates package's changelog and package.json to trigger this
       - 'packages/react-router-busy/**'
 
 # Don't run publish multiple times at once
