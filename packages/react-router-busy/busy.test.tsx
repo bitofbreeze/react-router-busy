@@ -6,6 +6,8 @@ import {
 	createMemoryRouter,
 } from "react-router-dom";
 import { BusyForm, BusyLink } from "./src/busy";
+// For some reason need this due to tsconfig include, exclude combo
+import React from "react";
 
 test("Submitting BusyForm puts inputs into busy state", async () => {
 	const routes: RouteObject[] = [

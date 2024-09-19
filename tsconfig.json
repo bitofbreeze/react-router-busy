@@ -2,6 +2,7 @@
 	// TODO https://bun.sh/docs/typescript#suggested-compileroptions
 	"compilerOptions": {
 		"lib": ["DOM", "DOM.Iterable", "ES2022"],
+		// Types aren't inherited so need to redeclare in each package that uses bun types
 		"types": ["bun-types"],
 		"isolatedModules": true,
 		"esModuleInterop": true,

@@ -1,12 +1,13 @@
 {
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
+		"types": ["vite/client", "bun-types"],
 		"outDir": "build",
 		"noEmit": false,
 		"declaration": true,
 		"declarationMap": true
 	},
 	// Things not to transpile
-	// TODO Adding test here causes it to: 'React' refers to a UMD global, but the current file is a module.
-	"exclude": ["*.test.tsx", "build/*"]
+	// "exclude": ["build/*"],
+	"include": ["src/*"]
 }
