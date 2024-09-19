@@ -1,6 +1,6 @@
 {
 	"name": "react-router-busy",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Accessible busy state for react-router forms and links",
 	"keywords": [
 		"react-router",
@@ -19,7 +19,10 @@
 		"url": "git+https://github.com/bitofbreeze/react-router-busy.git"
 	},
 	"license": "MIT",
-	"files": ["build", "src"],
+	"files": [
+		"build",
+		"src"
+	],
 	"type": "module",
 	"main": "build/busy.js",
 	"exports": {
