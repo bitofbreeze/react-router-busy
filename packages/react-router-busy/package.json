@@ -17,6 +17,7 @@
 	},
 	"repository": {
 		"type": "git",
+		"//url": "Semantic Release uses this to get the code, and mirror might not be updated since separate action + needs token while private, but also this might be where tags are published and we do want it in mirrored one",
 		"url": "git+https://github.com/bitofbreeze/react-router-busy.git"
 	},
 	"license": "MIT",

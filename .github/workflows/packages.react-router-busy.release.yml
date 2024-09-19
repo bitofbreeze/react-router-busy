@@ -79,5 +79,5 @@ jobs:
         with:
           working_directory: ./packages/react-router-busy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.COPY_GITHUB_REPO_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
