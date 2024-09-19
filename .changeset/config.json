@@ -4,7 +4,8 @@
 	"commit": false,
 	"fixed": [],
 	"linked": [],
-	"access": "restricted",
+	"//access": "Respects individual packages' private field",
+	"access": "public",
 	"baseBranch": "main",
 	"updateInternalDependencies": "patch",
 	"ignore": []

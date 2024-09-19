@@ -60,4 +60,4 @@ return (
 
 ### NavLink
 
-TODO Better not to have all that extra code for the `as` prop
+TODO Better not to have all that extra code for the `as` prop.
