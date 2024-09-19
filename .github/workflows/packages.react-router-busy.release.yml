@@ -61,9 +61,10 @@ jobs:
         uses: oven-sh/setup-bun@v2.0.1
         with:
           bun-version: latest
+          scope: "react-router-busy"
       - name: Install dependencies (`npm ci`)
         # Don't run with --frozen-lockfile since different set of dependencies due to subset of packages causes lockfile changes that cause failure
-        run: bun install
+        run: bun install --silent
       # Note we have to toggle Workflow permissions > Allow GitHub Actions to create and approve pull requests in https://github.com/bitofbreeze/mono/settings/actions
       # Even with permissions above https://github.com/orgs/community/discussions/27689#discussioncomment-5707424
       # Could avoid this with personal access token https://microsoft.github.io/beachball/concepts/ci-integration.html#authentication
