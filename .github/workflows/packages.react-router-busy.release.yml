@@ -50,7 +50,13 @@ jobs:
     if: github.event_name	== 'push'
     needs: [validate]
     runs-on: ubuntu-latest
-    permissions: write-all
+    # https://github.com/changesets/action/issues/179#issuecomment-1139116421
+    permissions:
+      id-token: write
+      contents: write
+      packages: write
+      pull-requests: write
+      issues: read
     steps:
       - name: Check out code
         uses: actions/checkout@v4
@@ -62,8 +68,6 @@ jobs:
           bun-version: latest
       - name: Install dependencies (`npm ci`)
         run: bun install --frozen-lockfile
-      # Note we have to toggle Workflow permissions > Allow GitHub Actions to create and approve pull requests in https://github.com/bitofbreeze/mono/settings/actions
-      # Actually maybe not with permissions option
       - name: Create release pull request or publish to npm
         id: changesets
         uses: changesets/action@v1
