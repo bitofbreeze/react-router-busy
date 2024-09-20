@@ -36,6 +36,6 @@ jobs:
           # copybara_options: --init-history
           # GitHub allows showing another README by default that is in .github https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
           # Also need to move license to show in GitHub main preview
+          # Nope doesn't work .github/LICENSE.md||packages/react-router-busy/LICENSE.md
           pr_move: |
             .github/README.md||packages/react-router-busy/README.md
-            .github/LICENSE.md||packages/react-router-busy/LICENSE.md
