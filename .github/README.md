@@ -4,6 +4,14 @@ Improve your app's UX with just an import. A simple and performant package for a
 
 For use with [react-router](https://github.com/remix-run/react-router) 6+ or [remix](https://github.com/remix-run/remix) 2+.
 
+> [!IMPORTANT]  
+> [Vite currently throws an error when trying to import the CSS module](https://github.com/vitejs/vite/issues/9487) this library uses to change the cursor, so please add the following to your vite.config for now, which will be fixed in the future:
+> ```
+> ssr: {
+>   noExternal: ['react-router-busy'],
+> },
+> ```
+
 ## The problem
 
 ![Editing input after submitting](https://github.com/user-attachments/assets/cc6f5a95-c2c8-4877-82ce-7dee317e063e)
@@ -80,6 +88,7 @@ return (
 
 ## To do
 
+- Fix CSS module import error "TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension ".css" for node_modules/react-router-busy/build/busy.module.css"
 - Fix a keyboard user still being able re-press the button
 - NavLink, Better not to have all that extra code for the `as` prop
 - Also export as Form and Link in case consumers prefer not replacing name
