@@ -35,5 +35,7 @@ jobs:
           # Make sure to always remove init-history after first copybara push, else PRs created in destination will fail the workflow since --init-history is not compatible with CHANGE_REQUEST
           # copybara_options: --init-history
           # GitHub allows showing another README by default that is in .github https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes
+          # Also need to move license to show in GitHub main preview
           pr_move: |
             .github/README.md||packages/react-router-busy/README.md
+            .github/LICENSE.md||packages/react-router-busy/LICENSE.md
