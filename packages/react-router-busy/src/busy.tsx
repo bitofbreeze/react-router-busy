@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import classes from "./busy.module.css";
 
-// Enable/disable all inputs via readonly except submit button via aria-busy
+// Enable/disable all inputs via readonly except select by disabling all other options and submit button via aria-busy
 const toggleInputs = (form: HTMLFormElement, on = false) => {
 	// TODO Check that this handles form elements outside form with form attribute
 	const inputs = form.elements;

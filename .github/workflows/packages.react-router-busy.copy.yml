@@ -13,7 +13,7 @@ jobs:
     # Still run on push in destination repo since it might be needed
     # Note PR opened in dest repo pushes commit to source repo and now it's not run, doesn't seem to matter but if it does check actor
     # And when PR merged in source, it still closes PR in destination but doesn't update destination repo
-    # if: github.event_name	!= 'push' || github.repository != 'bitofbreeze/mono'
+    if: github.event_name	!= 'push' || github.repository != 'bitofbreeze/mono'
     runs-on: ubuntu-latest
     steps:
       - name: Check out code

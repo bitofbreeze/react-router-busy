@@ -34,8 +34,6 @@
 			// Until biome handles nested gitignore files
 			// Actually not tracked in git so doesn't matter
 			// "./packages/react-router-busy/dist/*",
-			// changesets changes package json formatting causing lint failure before publish
-			// "**/package.json"
 		]
 	},
 	"vcs": {
