@@ -2,7 +2,7 @@
 
 Improve your app's UX with just an import. A simple and performant package for accessible form input, button, and link **loading states**.
 
-For use with [react-router](https://github.com/remix-run/react-router) 6+ or [remix](https://github.com/remix-run/react-router) 2+.
+For use with [react-router](https://github.com/remix-run/react-router) 6+ or [remix](https://github.com/remix-run/remix) 2+.
 
 ## The problem
 
