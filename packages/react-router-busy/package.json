@@ -38,8 +38,8 @@
 		"check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm"
 	},
 	"peerDependencies": {
-		"react-router-dom": "^6.26.2",
-		"react": "^18.3.1"
+		"react-router-dom": "^6.0.0",
+		"react": "^18.0.0"
 	},
 	"//devDependencies": "Need vite for css module import when building",
 	"devDependencies": {
@@ -59,6 +59,6 @@
 			"@semantic-release/npm",
 			"@semantic-release/github"
 		],
-		"dryRun": true
+		"dryRun": false
 	}
 }
