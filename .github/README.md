@@ -4,7 +4,7 @@ Improve your app's UX with just an import. A simple and performant package for a
 
 ## The problem
 
-<video src="https://github.com/user-attachments/assets/75807fd7-39c4-4305-ae98-47b93789f7e4" controls autoplay muted></video>
+![Editing input after submitting](https://github.com/user-attachments/assets/cc6f5a95-c2c8-4877-82ce-7dee317e063e)
 
 ## The solution
 
