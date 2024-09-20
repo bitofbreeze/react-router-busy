@@ -2,7 +2,7 @@
 	"name": "react-router-busy",
 	"//version": "Not used https://semantic-release.gitbook.io/semantic-release/support/faq#why-is-the-package.jsons-version-not-updated-in-my-repository",
 	"version": "0.0.0",
-	"description": "Drop-in busy state for react-router forms and links",
+	"description": "Drop-in busy state for react-router/remix forms and links",
 	"keywords": [
 		"react-router",
 		"form",
@@ -59,6 +59,6 @@
 			"@semantic-release/npm",
 			"@semantic-release/github"
 		],
-		"dryRun": false
+		"dryRun": true
 	}
 }
