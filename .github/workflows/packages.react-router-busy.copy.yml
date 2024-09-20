@@ -8,14 +8,14 @@ on:
   pull_request_target:
   # TODO Call when a PR affecting this package is merged or release is made
 jobs:
-  move-code:
+  mirror:
     # Just don't run push in monorepo since we use cron there
     # Still run on push in destination repo since it might be needed
     # Note PR opened in dest repo pushes commit to source repo and now it's not run, doesn't seem to matter but if it does check actor
     # And when PR merged in source, it still closes PR in destination but doesn't update destination repo
     # Need to make sure only runs in mono and react-router-busy, not other mirrors
-    if: (github.repository == 'bitofbreeze/mono' || github.repository == 'bitofbreeze/react-router-busy')
-    # && (github.event_name	!= 'push' || github.repository != 'bitofbreeze/mono')
+    # But also could just not mirror these actions to others
+    if: (github.repository == 'bitofbreeze/mono' || github.repository == 'bitofbreeze/react-router-busy') && (github.event_name	!= 'push' || github.repository != 'bitofbreeze/mono')
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
