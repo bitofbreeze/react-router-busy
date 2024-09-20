@@ -2,7 +2,7 @@
 	"name": "react-router-busy",
 	"//version": "Not used https://semantic-release.gitbook.io/semantic-release/support/faq#why-is-the-package.jsons-version-not-updated-in-my-repository",
 	"version": "0.0.0",
-	"description": "Accessible busy state for react-router forms and links",
+	"description": "Drop-in busy state for react-router forms and links",
 	"keywords": [
 		"react-router",
 		"form",
@@ -22,6 +22,7 @@
 		"url": "git+https://github.com/bitofbreeze/react-router-busy.git"
 	},
 	"license": "MIT",
+	"//files": "Publish src too for bun imports",
 	"files": ["build", "src"],
 	"type": "module",
 	"main": "build/busy.js",
