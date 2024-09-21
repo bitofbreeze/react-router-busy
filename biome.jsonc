@@ -5,7 +5,7 @@
 	},
 	"linter": {
 		"enabled": true,
-		"ignore": [],
+		"ignore": ["./apps/og-image/worker-configuration.d.ts"],
 		"rules": {
 			"recommended": true,
 			"a11y": {
@@ -30,10 +30,11 @@
 	"formatter": {
 		"ignore": [
 			// Until we fix vite-plugin-icons-spritesheet
-			"./apps/git-sell/public/icons/*"
+			"./apps/git-sell/public/icons/*",
 			// Until biome handles nested gitignore files
 			// Actually not tracked in git so doesn't matter
 			// "./packages/react-router-busy/dist/*",
+			"./apps/og-image/worker-configuration.d.ts"
 		]
 	},
 	"vcs": {
