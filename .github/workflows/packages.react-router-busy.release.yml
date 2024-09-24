@@ -1,4 +1,4 @@
-name: Release
+name: Release react-router-busy
 
 on:
   workflow_dispatch:

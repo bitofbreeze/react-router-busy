@@ -10,6 +10,8 @@ yarn.lock
 .wrangler
 
 *.db
+*.db-shm
+*.db-wal
 
 # dev secrets
 .dev.vars

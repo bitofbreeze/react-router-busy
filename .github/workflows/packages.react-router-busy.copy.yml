@@ -15,9 +15,15 @@ jobs:
     # And when PR merged in source, it still closes PR in destination but doesn't update destination repo
     # Need to make sure only runs in mono and react-router-busy, not other mirrors
     # But also could just not mirror these actions to others
-    if: (github.repository == 'bitofbreeze/mono' || github.repository == 'bitofbreeze/react-router-busy') && (github.event_name	!= 'push' || github.repository != 'bitofbreeze/mono')
+    # "54: Nothing to do in the SoT repo except for push events."
+    if: (github.repository == 'bitofbreeze/mono' || github.repository == 'bitofbreeze/react-router-busy') && (github.event_name	!= 'push' || github.repository != 'bitofbreeze/mono') && (github.event_name != 'synchronize' || github.repository != 'bitofbreeze/mono')
     runs-on: ubuntu-latest
     steps:
+      # TODO Not working in PR that this was added in
+      - name: Log
+        run: echo "event name is:" ${{ github.event_name }}
+      - name: Log 2
+        run: echo "event type is:" ${{ github.event.action }}
       - name: Check out code
         uses: actions/checkout@v4
         with:

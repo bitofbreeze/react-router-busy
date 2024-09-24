@@ -1,4 +1,4 @@
-name: Integrate
+name: Integrate react-router-busy
 
 on:
   pull_request:
