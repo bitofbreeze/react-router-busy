@@ -50,7 +50,7 @@ jobs:
       - name: Build
         run: bun --filter react-router-busy build
       - name: Check exports
-        run: bun --filter react-router-busy check-exports
+        run: bun --filter react-router-busy check:exports
       # Note we have to toggle Workflow permissions > Allow GitHub Actions to create and approve pull requests in https://github.com/bitofbreeze/mono/settings/actions
       # Even with permissions above https://github.com/orgs/community/discussions/27689#discussioncomment-5707424
       # Could avoid this with personal access token https://microsoft.github.io/beachball/concepts/ci-integration.html#authentication

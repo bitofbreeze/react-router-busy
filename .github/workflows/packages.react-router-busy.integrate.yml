@@ -40,4 +40,4 @@ jobs:
       - name: Build
         run: bun --filter react-router-busy build
       - name: Check exports
-        run: bun --filter react-router-busy check-exports
+        run: bun --filter react-router-busy check:exports
