@@ -15,7 +15,8 @@
 		"arktypeio.arkdark",
 		"Gruntfuggly.todo-tree",
 		"formulahendry.auto-rename-tag",
-		"GitHub.vscode-github-actions"
+		"GitHub.vscode-github-actions",
+		"stripe.markdoc-language-support"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": []
