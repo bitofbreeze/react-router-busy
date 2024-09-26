@@ -22,3 +22,6 @@ build/
 
 # Don't see this anywhere
 # .cache
+
+# bunx wrangler pages functions build ./functions
+_worker.bundle
