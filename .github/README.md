@@ -1,5 +1,9 @@
 # react-router-busy
 
+[![Build Size](https://img.shields.io/bundlephobia/minzip/react-router-busy?label=bundle%20size&style=flat&colorA=000000&colorB=000000)](https://bundlephobia.com/package/react-router-busy)
+[![Version](https://img.shields.io/npm/v/react-router-busy?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/react-router-busy)
+[![Downloads](https://img.shields.io/npm/dt/react-router-busy.svg?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/react-router-busy)
+
 Improve your app's UX with just an import. A simple and performant package for accessible form input, button, and link **loading states**.
 
 For use with [react-router](https://github.com/remix-run/react-router) 6+ or [remix](https://github.com/remix-run/remix) 2+.
